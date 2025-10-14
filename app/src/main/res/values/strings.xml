@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">ReMedi</string>
+    <string name="login">Login</string>
+    <string name="email">Email address</string>
+    <string name="pass">Password</string>
+    <string name="signup">Sign Up</string>
+    <string name="signRedirect">Not a user? <u>Sign up</u></string>
+    <string name="loginRedirect">Already a user? <u>Log in</u></string>
+    <string name="cont">Continue</string>
+</resources>
