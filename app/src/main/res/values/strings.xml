@@ -7,4 +7,8 @@
     <string name="signRedirect">Not a user? <u>Sign up</u></string>
     <string name="loginRedirect">Already a user? <u>Log in</u></string>
     <string name="cont">Continue</string>
+    <string name="inv">Inventory</string>
+    <string name="rem">Reminders</string>
+    <string name="notes">Notes</string>
+    <string name="chatbot">Report Analysis</string>
 </resources>

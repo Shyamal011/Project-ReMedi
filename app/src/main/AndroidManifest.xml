@@ -12,6 +12,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ProjectReMedi">
         <activity
+            android:name=".Chatbot"
+            android:exported="false" />
+        <activity
+            android:name=".Notes"
+            android:exported="false" />
+        <activity
+            android:name=".Reminders"
+            android:exported="false" />
+        <activity
+            android:name=".Inventory"
+            android:exported="false" />
+        <activity
             android:name=".HomePage"
             android:exported="false" />
         <activity
