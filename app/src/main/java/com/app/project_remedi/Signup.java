@@ -44,6 +44,7 @@ public class Signup extends AppCompatActivity {
             return insets;
         });
         auth = FirebaseAuth.getInstance();
+        db=FirebaseFirestore.getInstance();
         signName=findViewById(R.id.signName);
         signEmail = findViewById(R.id.signEmail);
         signPass = findViewById(R.id.signPass);
