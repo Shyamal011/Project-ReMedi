@@ -20,11 +20,16 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseAuthException;
+import com.google.firebase.firestore.FirebaseFirestore;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class Signup extends AppCompatActivity {
 
     private FirebaseAuth auth;
-    private EditText signEmail,signPass;
+    private FirebaseFirestore db;
+    private EditText signName,signEmail,signPass;
     private Button signButton;
     private TextView logRedirect;
 
@@ -39,6 +44,7 @@ public class Signup extends AppCompatActivity {
             return insets;
         });
         auth = FirebaseAuth.getInstance();
+        signName=findViewById(R.id.signName);
         signEmail = findViewById(R.id.signEmail);
         signPass = findViewById(R.id.signPass);
         signButton = findViewById(R.id.signButton);
@@ -46,6 +52,7 @@ public class Signup extends AppCompatActivity {
         signButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                String name = signName.getText().toString().trim();
                 String email = signEmail.getText().toString().trim();
                 String pass = signPass.getText().toString().trim();
                 if(email.isEmpty()) {
@@ -59,6 +66,11 @@ public class Signup extends AppCompatActivity {
                             .addOnSuccessListener(new OnSuccessListener<AuthResult>() {
                                 @Override
                                 public void onSuccess(AuthResult authResult) {
+                                    String uid = auth.getCurrentUser().getUid();
+                                    Map<String,Object> userData = new HashMap<>();
+                                    userData.put("Name",name);
+                                    userData.put("GuardianID",null);
+                                    db.collection("Users").document(uid).set(userData);
                                     Toast.makeText(Signup.this, "Sign up successful", Toast.LENGTH_SHORT).show();
                                     startActivity(new Intent(Signup.this, HomePage.class));
                                 }
