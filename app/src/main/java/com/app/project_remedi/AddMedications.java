@@ -35,6 +35,8 @@ import java.util.Locale;
 import java.util.Map;
 
 public class AddMedications extends AppCompatActivity {
+    private FirebaseAuth auth;
+    private FirebaseFirestore db;
     private EditText medNameInput, totalQtyInput, dosageQtyInput, timeInput;
     private Button addButton;
     private static final int PERMISSION_REQUEST_CODE = 1001;
@@ -134,6 +136,9 @@ public class AddMedications extends AppCompatActivity {
 
         int notificationId = (medName + medTime).hashCode();
 
+        auth = FirebaseAuth.getInstance();
+        String uid = auth.getCurrentUser().getUid();
+        db = FirebaseFirestore.getInstance();
         Map<String, Object> med = new HashMap<>();
         med.put("name", medName);
         med.put("totalQty", totalQtyStr);
@@ -142,6 +147,7 @@ public class AddMedications extends AppCompatActivity {
         med.put("notificationId", notificationId);
         med.put("taken", false);
         setMedicationAlarm(medName, medTime,notificationId);
+        db.collection("Meds").document(uid).set(med);
     }
     private void setMedicationAlarm(String medName, String medTime, int notificationId) {
         AlarmManager alarmManager = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
