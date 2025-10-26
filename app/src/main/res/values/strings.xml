@@ -25,4 +25,5 @@
     <string name="time">Time of dose</string>
     <string name="hint_time">eg: 12:00</string>
     <string name="add">Add</string>
+    <string name="edit">Edit</string>
 </resources>

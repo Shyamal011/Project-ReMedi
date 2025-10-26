@@ -160,7 +160,6 @@ public class AddMedications extends AppCompatActivity {
 
         Calendar calendar = Calendar.getInstance();
         try {
-            // Logic to parse "HH:MM AM/PM" format
             String[] timeParts = medTime.split(" ");
             String time = timeParts[0];
             String ampm = timeParts[1];

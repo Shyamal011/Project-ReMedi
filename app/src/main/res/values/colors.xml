@@ -5,4 +5,16 @@
     <color name="blue">#BEE1ED</color>
     <color name="deep_purple">#441E4B</color>
     <color name="purple">#5D2267</color>
+    -------------------------------------
+    <color name="purple1">#EFBBFF</color>
+    <color name="purple2">#D896FF</color>
+    <color name="purple3">#BE29EC</color>
+    <color name="purple4">#800080</color>
+    <color name="purple5">#660066</color>
+    -------------------------------------
+    <color name="purple6">#6D016D</color>
+    <color name="purple7">#600760</color>
+    <color name="purple8">#520C52</color>
+    <color name="purple9">#3F0B3F</color>
+    <color name="purple10">#2B0A2B</color>
 </resources>
