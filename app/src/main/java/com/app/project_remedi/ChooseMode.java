@@ -1,6 +1,8 @@
 package com.app.project_remedi;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,5 +22,8 @@ public class ChooseMode extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+    }
+    public void pPage (View view) {
+        startActivity(new Intent(ChooseMode.this,Login.class));
     }
 }

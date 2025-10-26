@@ -17,13 +17,12 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginTop="50dp"
+        android:layout_width="84dp"
+        android:layout_height="70dp"
         android:contentDescription="@string/logo_desc"
         app:layout_constraintBottom_toTopOf="@+id/textView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
 
         app:layout_constraintTop_toTopOf="@id/topGuideline"
@@ -34,40 +33,39 @@
         android:id="@+id/textView"
         android:layout_width="90dp"
         android:layout_height="30dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginRight="60dp"
+        android:layout_marginBottom="30dp"
+        android:fontFamily="@font/rubik"
+        android:gravity="center"
         android:text="@string/app_name"
         android:textColor="@color/black"
         android:textSize="24sp"
         android:textStyle="bold"
-        android:fontFamily="@font/rubik"
-        android:layout_marginLeft="60dp"
-        android:layout_marginRight="60dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="30dp"
-        android:gravity="center"
         app:layout_constraintBottom_toTopOf="@+id/textView1"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/imageView"
         app:layout_constraintVertical_bias="0.649" />
+
 
     <TextView
         android:id="@+id/textView1"
         android:layout_width="207dp"
         android:layout_height="44dp"
-        android:text="@string/choose_mode"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="45dp"
         android:layout_marginBottom="5dp"
+        android:gravity="center"
+        android:text="@string/choose_mode"
         android:textColor="@color/black"
         android:textSize="28sp"
         android:textStyle="bold"
-        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@id/patient"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textView"
-        app:layout_constraintBottom_toTopOf="@id/patient"/>
-
+        app:layout_constraintTop_toBottomOf="@id/textView" />
 
     <Button
         android:id="@+id/patient"
@@ -78,6 +76,7 @@
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="20sp"
+        android:onClick="pPage"
         android:layout_marginTop="10dp"
         android:layout_marginBottom="5dp"
         app:layout_constraintEnd_toEndOf="parent"
