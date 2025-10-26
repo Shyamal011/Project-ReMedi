@@ -17,4 +17,9 @@
     <color name="purple8">#520C52</color>
     <color name="purple9">#3F0B3F</color>
     <color name="purple10">#2B0A2B</color>
+    -------------------------------------
+    <color name="gray1">#F0F5F8</color>
+    <color name="bluegray">#B4D4DE</color>
+    <color name="blue1">#007CFF</color>
+
 </resources>

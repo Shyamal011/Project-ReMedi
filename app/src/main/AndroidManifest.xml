@@ -19,6 +19,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ProjectReMedi">
         <activity
+            android:name=".EditReminder"
+            android:exported="false" />
+        <activity
             android:name=".ChooseMode"
             android:exported="false" />
         <activity
