@@ -9,7 +9,6 @@
     <uses-permission android:name="com.android.alarm.permission.SET_ALARM" />
     <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
 
-
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -19,6 +18,9 @@
         android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
         android:theme="@style/Theme.ProjectReMedi">
+        <activity
+            android:name=".ChooseMode"
+            android:exported="false" />
         <activity
             android:name=".AddMedications"
             android:exported="false" />
